@@ -1,0 +1,17 @@
+http-port: 8080
+jwt:
+  signing-key: e2ec9129-dd76-4c1d-a0e4-964ffd33e917
+  expires-time: 7d
+  buffer-time: 1d
+  issuer: qmPlus
+zap:
+  level: info
+  format: console
+  prefix: ""
+  director: log
+  show-line: true
+  encode-level: LowercaseColorLevelEncoder
+  stacktrace-key: stacktrace
+  log-in-console: true
+  retention-day: -1
+mysql: "root:123456@tcp(192.168.31.90:3306)/DJH_AgentFlowDB?charset=utf8mb4&parseTime=True&loc=Local"
