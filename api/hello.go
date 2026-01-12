@@ -1,7 +1,8 @@
 package api
 
 import (
-	"net/http"
+	"agent/model/common/response"
+	"agent/utils"
 
 	"github.com/gin-gonic/gin"
 )
@@ -9,5 +10,6 @@ import (
 type Hello struct{}
 
 func (h *Hello) Hello(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, gin.H{"message": "Hello Gin!"})
+	userInfo := utils.GeuUserInfo(ctx)
+	response.OkWithData(userInfo, ctx)
 }
