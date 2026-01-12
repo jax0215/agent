@@ -15,3 +15,7 @@ zap:
   log-in-console: true
   retention-day: -1
 mysql: "root:123456@tcp(192.168.31.90:3306)/DJH_AgentFlowDB?charset=utf8mb4&parseTime=True&loc=Local"
+db-list:
+  - disable: false # 是否禁用
+    alias-name: "accounts" # 数据库的名称,注意: alias-name 需要在db-list中唯一
+    db: "root:123456@tcp(192.168.31.90:3306)/DJH_AgentFlowDB?charset=utf8mb4&parseTime=True&loc=Local"
